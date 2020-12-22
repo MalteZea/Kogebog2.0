@@ -19,7 +19,10 @@ public class SimpelTest {
         glasurOpskrift.visIngredienser();
         blankLine();
         teOpskrift.visIngredienser();
-
+        blankLine();
+        glasurOpskrift.visFremgangsmaade();
+        blankLine();
+        teOpskrift.visFremgangsmaade();
     }
 
     public static void blankLine() {

@@ -21,6 +21,17 @@ public class Opskrift {
         }
     }
 
+    public void visFremgangsmaade(){
+        if (navn.equals("Glasur")){
+            System.out.println("Opskriften for glasur: \n" +
+                    "- Du blander flormelis og sukker, og smører det på kagen.");
+        } else if (navn.equals("Te")){
+            System.out.println("Opskriften for te: \n" +
+                    "- Put teen i kogende vand, vent 2 minutter og server.");
+        } else return;
+
+    }
+
     public void addIngrediens(Ingrediens ingrediens) {
         this.ingredienser.add(ingrediens);
     }
