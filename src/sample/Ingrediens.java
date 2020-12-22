@@ -20,6 +20,7 @@ public class Ingrediens implements KalorieBeregner {
     }
 
     private int kalorie;
+    Diet diet;
 
     Ingrediens(String navn, int kalorie) {
         this.navn = navn;
