@@ -16,13 +16,11 @@ public class SimpelTest {
         teOpskrift.addIngrediens("Vand", 0);
         teOpskrift.addIngrediens("Citron", 29);
         blankLine();
-        glasurOpskrift.visIngredienser();
+        glasurOpskrift.visOpskrift();
         blankLine();
-        teOpskrift.visIngredienser();
+        teOpskrift.visOpskrift();
         blankLine();
-        glasurOpskrift.visFremgangsmaade();
-        blankLine();
-        teOpskrift.visFremgangsmaade();
+
     }
 
     public static void blankLine() {
