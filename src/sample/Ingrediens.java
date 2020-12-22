@@ -21,9 +21,19 @@ public class Ingrediens {
 
     private int kalorie;
 
-    Ingrediens(String navn, int kalorie){
+    Ingrediens(String navn, int kalorie) {
         this.navn = navn;
         this.kalorie = kalorie;
         System.out.println("Ingrediens er oprettet: " + navn);
+    }
+
+    public boolean rigPaaKalorier() {
+        if (kalorie > 100) {
+            System.out.println(navn + " er rig på kalorier.");
+            return true;
+        } else {
+            System.out.println(navn + " er ikke rig på kalorier.");
+            return false;
+        }
     }
 }

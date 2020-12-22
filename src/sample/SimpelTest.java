@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class SimpelTest {
 
     public static void main(String[] args) {
-        System.out.println("Velkommen til min opskrifts-applikations-dummy");
+        /*System.out.println("Velkommen til min opskrifts-applikations-dummy");
         blankLine();
         Opskrift glasurOpskrift = new Opskrift("Glasur");
         glasurOpskrift.addIngrediens("Flormelis", 389);
@@ -14,12 +14,13 @@ public class SimpelTest {
         Opskrift teOpskrift = new Opskrift("Te");
         teOpskrift.addIngrediens("Tebrev", 0);
         teOpskrift.addIngrediens("Vand", 0);
-        teOpskrift.addIngrediens("Citron", 29);
+        teOpskrift.addIngrediens("Citron", 29); */
+
+        Ingrediens sukker = new Ingrediens("Sukker", 400);
+        Ingrediens citron = new Ingrediens("Citron", 29);
+        sukker.rigPaaKalorier();
         blankLine();
-        glasurOpskrift.visOpskrift();
-        blankLine();
-        teOpskrift.visOpskrift();
-        blankLine();
+        citron.rigPaaKalorier();
 
     }
 
