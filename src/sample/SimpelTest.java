@@ -5,13 +5,14 @@ import java.util.ArrayList;
 public class SimpelTest {
 
     public static void main(String[] args) {
-        IngrediensMedNaeringsDetaljer pølse = new IngrediensMedNaeringsDetaljer("Pølse", 360, 3, 2, 3);
-        IngrediensMedNaeringsDetaljer citron = new IngrediensMedNaeringsDetaljer("Citron", 29, 10, 4, 1);
+        Opskrift te = new Opskrift("Te");
+        te.addIngrediens("Tebrev", 0);
+        te.addIngrediens("Vand", 0);
+        te.addIngrediens("Citron", 3);
+        te.addIngrediens("Sukker", 22);
         blankLine();
-        pølse.godModForkølelse();
+        te.kalorierIAlt();
         blankLine();
-        citron.godModForkølelse();
-
     }
 
     public static void blankLine() {

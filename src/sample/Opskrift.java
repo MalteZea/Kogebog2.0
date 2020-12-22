@@ -2,7 +2,7 @@ package sample;
 
 import java.util.ArrayList;
 
-public class Opskrift {
+public class Opskrift implements KalorieBeregner{
     Opskrift(String navn) {
         this.navn = navn;
         System.out.println("Opskrift er oprettet: " + navn);
@@ -86,5 +86,15 @@ public class Opskrift {
 
     public void setTilberedningstid(int tilberedningstid) {
         this.tilberedningstid = tilberedningstid;
+    }
+
+    @Override
+    public int kalorierIAlt() {
+        int sum = 0;
+        for (Ingrediens ingrediens : ingredienser){
+            sum += ingrediens.kalorierIAlt();
+        }
+        System.out.println("Opskriften " + navn + " indeholder " + sum + " kalorier i alt");
+        return sum;
     }
 }

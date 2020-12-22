@@ -1,6 +1,6 @@
 package sample;
 
-public class Ingrediens {
+public class Ingrediens implements KalorieBeregner {
     private String navn;
 
     public String getNavn() {
@@ -35,5 +35,11 @@ public class Ingrediens {
             System.out.println(navn + " er ikke rig på kalorier.");
             return false;
         }
+    }
+
+    @Override
+    public int kalorierIAlt() {
+        System.out.println("Ingrediensen " + navn + " indeholder " + kalorie + " kalorier i alt");
+        return kalorie;
     }
 }
