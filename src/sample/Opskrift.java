@@ -14,6 +14,13 @@ public class Opskrift {
     private int tilberedningstid;
     private ArrayList<Ingrediens> ingredienser = new ArrayList<>();
 
+    public void visIngredienser(){
+        System.out.println("Du skal til " + navn.toLowerCase() + " bruge:");
+        for (Ingrediens ingrediens : ingredienser){
+            System.out.println(" - " + ingrediens.getNavn());
+        }
+    }
+
     public void addIngrediens(Ingrediens ingrediens) {
         this.ingredienser.add(ingrediens);
     }
