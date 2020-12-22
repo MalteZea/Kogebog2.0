@@ -10,9 +10,15 @@ public class SimpelTest {
         te.addIngrediens("Vand", 0);
         te.addIngrediens("Citron", 3);
         te.addIngrediens("Sukker", 22);
-        blankLine();
-        te.kalorierIAlt();
-        blankLine();
+
+        try {
+            te.kalorierPerPortion();
+        }
+        catch (Exception e) {
+            System.out.println("FEJL - opskriften " + te.getNavn() + " må ikke have 0 portioner");
+        }
+        te.setAntalPortioner(2);
+        te.kalorierPerPortion();
     }
 
     public static void blankLine() {

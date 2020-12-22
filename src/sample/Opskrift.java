@@ -2,7 +2,7 @@ package sample;
 
 import java.util.ArrayList;
 
-public class Opskrift implements KalorieBeregner{
+public class Opskrift implements KalorieBeregner {
     Opskrift(String navn) {
         this.navn = navn;
         System.out.println("Opskrift er oprettet: " + navn);
@@ -14,24 +14,24 @@ public class Opskrift implements KalorieBeregner{
     private int tilberedningstid;
     private ArrayList<Ingrediens> ingredienser = new ArrayList<>();
 
-    public void visOpskrift(){
+    public void visOpskrift() {
         visIngredienser();
         System.out.println("");
         visFremgangsmaade();
     }
 
-    public void visIngredienser(){
+    public void visIngredienser() {
         System.out.println("Du skal til " + navn.toLowerCase() + " bruge:");
-        for (Ingrediens ingrediens : ingredienser){
+        for (Ingrediens ingrediens : ingredienser) {
             System.out.println(" - " + ingrediens.getNavn());
         }
     }
 
-    public void visFremgangsmaade(){
-        if (navn.equals("Glasur")){
+    public void visFremgangsmaade() {
+        if (navn.equals("Glasur")) {
             System.out.println("Opskriften for glasur: \n" +
                     "- Du blander flormelis og sukker, og smører det på kagen.");
-        } else if (navn.equals("Te")){
+        } else if (navn.equals("Te")) {
             System.out.println("Opskriften for te: \n" +
                     "- Put teen i kogende vand, vent 2 minutter og server.");
         } else return;
@@ -91,10 +91,16 @@ public class Opskrift implements KalorieBeregner{
     @Override
     public int kalorierIAlt() {
         int sum = 0;
-        for (Ingrediens ingrediens : ingredienser){
+        for (Ingrediens ingrediens : ingredienser) {
             sum += ingrediens.kalorierIAlt();
         }
-        System.out.println("Opskriften " + navn + " indeholder " + sum + " kalorier i alt");
+        //System.out.println("Opskriften " + navn + " indeholder " + sum + " kalorier i alt");
         return sum;
+    }
+
+    int kalorierPerPortion() {
+        int kaloriePerPortion = kalorierIAlt() / antalPortioner;
+        System.out.println("Opskriften indeholder " + kalorierIAlt() + " kalorier i alt og " + kaloriePerPortion + " kalorier per portion.");
+        return kaloriePerPortion;
     }
 }

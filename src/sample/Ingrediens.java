@@ -39,7 +39,7 @@ public class Ingrediens implements KalorieBeregner {
 
     @Override
     public int kalorierIAlt() {
-        System.out.println("Ingrediensen " + navn + " indeholder " + kalorie + " kalorier i alt");
+        //System.out.println("Ingrediensen " + navn + " indeholder " + kalorie + " kalorier i alt");
         return kalorie;
     }
 }
