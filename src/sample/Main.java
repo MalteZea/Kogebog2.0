@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class Main extends Application {
 
     @Override
@@ -17,7 +20,9 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        SimpelTest simpelTest = new SimpelTest();
+        simpelTest.save();
         launch(args);
     }
 }
