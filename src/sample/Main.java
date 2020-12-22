@@ -22,7 +22,13 @@ public class Main extends Application {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         SimpelTest simpelTest = new SimpelTest();
-        simpelTest.save();
+
+        //EKSEMPEL på opg. 14 Persistens
+        //simpelTest.save();
+        ArrayList<Opskrift> opskrifter = simpelTest.bootUp();
+        for (Opskrift opskrift : opskrifter){
+            System.out.println("Jeg har fundet en opskrift.");
+        }
         launch(args);
     }
 }

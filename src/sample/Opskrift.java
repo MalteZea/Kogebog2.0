@@ -1,8 +1,9 @@
 package sample;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Opskrift implements KalorieBeregner {
+public class Opskrift implements KalorieBeregner, Serializable {
     Opskrift(String navn) {
         this.navn = navn;
         System.out.println("Opskrift er oprettet: " + navn);
@@ -102,5 +103,14 @@ public class Opskrift implements KalorieBeregner {
         int kaloriePerPortion = kalorierIAlt() / antalPortioner;
         System.out.println("Opskriften indeholder " + kalorierIAlt() + " kalorier i alt og " + kaloriePerPortion + " kalorier per portion.");
         return kaloriePerPortion;
+    }
+
+    //EKSEMPEL på opg. 15.
+    public boolean erDerKoed(){
+        for (Ingrediens ingrediens : ingredienser){
+            if (ingrediens.diet.equals(Diet.KØD)){
+                return true;
+            }
+        } return false;
     }
 }

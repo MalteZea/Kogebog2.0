@@ -3,7 +3,7 @@ package sample;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Persistens {
+public class Persistens implements Serializable {
 
     public ArrayList<Opskrift> load() throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("t.tmp");

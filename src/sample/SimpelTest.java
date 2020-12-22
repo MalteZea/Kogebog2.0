@@ -1,12 +1,14 @@
 package sample;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SimpelTest {
+public class SimpelTest implements Serializable {
 
     public static void main(String[] args) {
-        Opskrift te = new Opskrift("Te");
+        //Eksempel på try catch
+       /* Opskrift te = new Opskrift("Te");
         te.addIngrediens("Tebrev", 0);
         te.addIngrediens("Vand", 0);
         te.addIngrediens("Citron", 3);
@@ -18,7 +20,7 @@ public class SimpelTest {
             System.out.println("FEJL - opskriften " + te.getNavn() + " må ikke have 0 portioner");
         }
         te.setAntalPortioner(2);
-        te.kalorierPerPortion();
+        te.kalorierPerPortion();*/
     }
 
     public static void blankLine() {
@@ -43,9 +45,10 @@ public class SimpelTest {
         persistens.save(opskrifter);
     }
 
-    public void bootUp() throws IOException, ClassNotFoundException {
+    public ArrayList<Opskrift> bootUp() throws IOException, ClassNotFoundException {
         ArrayList<Opskrift> opskrifter = new ArrayList<>();
         Persistens persistens = new Persistens();
         opskrifter = persistens.load();
+        return opskrifter;
     }
 }

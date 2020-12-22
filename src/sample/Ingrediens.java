@@ -1,6 +1,8 @@
 package sample;
 
-public class Ingrediens implements KalorieBeregner {
+import java.io.Serializable;
+
+public class Ingrediens implements KalorieBeregner, Serializable {
     private String navn;
 
     public String getNavn() {
